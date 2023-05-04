@@ -1,0 +1,64 @@
+---
+import data from "../index.yaml";
+import Layout from "../layouts/Layout.astro";
+import type { Package } from "./index.astro";
+
+export function getStaticPaths() {
+  return data.packages.map((p: Package) => ({
+    params: { name: p.name },
+    props: {
+      packageInfo: p,
+      meta: data.meta,
+    },
+  }));
+}
+
+const { packageInfo, meta } = Astro.props;
+---
+
+<Layout title={`${packageInfo.name} - ${meta.title}`}>
+  <section>
+    <h1 class="my-6 text-4xl font-bold">{packageInfo.name}</h1>
+    <p class="my-6 text-lg font-normal">
+      {packageInfo.description}
+    </p>
+    <div class="mockup-code">
+      <pre
+        data-prefix="$"><code>pip install {packageInfo.name} --extra-index-url {meta.indexUrl}</code></pre>
+    </div>
+  </section>
+  <div class="divider"></div>
+  <div class="flex w-full">
+    <div class="grid flex-shrink-0">
+      <h3 class="mb-4 text-xl font-bold">Links</h3>
+      <div class="btn-group btn-group-vertical">
+        {
+          packageInfo.links.map((link: { name: string; url: string }) => (
+            <button
+              class="btn btn-outline"
+              onclick={`location.href='${link.url}'`}
+            >
+              {link.name}
+            </button>
+          ))
+        }
+      </div>
+    </div>
+    <div class="divider divider-horizontal"></div>
+    <div class="grid flex-grow">
+      <h3 class="text-xl font-bold">Release history</h3>
+      <ul class="menu bg-base-100 w-full">
+        {
+          packageInfo.versions
+            .map((item) => item)
+            .reverse()
+            .map((v: { version: string; link: string }) => (
+              <li class="container bg-base-100 hover:bg-gray-100 border my-1 rounded-2xl">
+                <a href={v.link}>{v.version}</a>
+              </li>
+            ))
+        }
+      </ul>
+    </div>
+  </div>
+</Layout>

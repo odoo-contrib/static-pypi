@@ -1,0 +1,17 @@
+meta:
+  title: Private Pypi
+  welcomeMessaage: "Welcome to the my private Python package index! You can install packages with :"
+  indexUrl: https://kafai-lam.github.io/pypi/
+
+packages:
+  - name: odoo
+    summary: Odoo Server
+    description: Odoo is a complete ERP and CRM. The main features are accounting (analytic and financial), stock management, sales and purchases management, tasks automation, marketing campaigns, help desk, POS, etc. Technical features include a distributed server, an object database, a dynamic GUI, customizable reports, and XML-RPC interfaces.
+    links:
+      - name: Homepage
+        url: https://www.odoo.com
+      - name: Github
+        url: https://github.com/kafai-lam/odoo
+    versions:
+      - version: 16.0.post20230503
+        link: https://github.com/kafai-lam/odoo/releases/download/16.0.post20230503/odoo-16.0.post20230503-py3-none-any.whl

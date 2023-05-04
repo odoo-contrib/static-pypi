@@ -1,0 +1,22 @@
+{
+  "name": "static-pypi",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^3.1.2",
+    "@frontendista/astro-html-minify": "^1.0.7",
+    "astro": "^2.3.4",
+    "daisyui": "^2.51.6",
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-yaml": "^4.0.1"
+  }
+}

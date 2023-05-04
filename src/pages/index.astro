@@ -1,0 +1,56 @@
+---
+import data from "../index.yaml";
+import Layout from "../layouts/Layout.astro";
+
+export interface Package {
+  name: string;
+  description: string;
+  links: {
+    name: string;
+    url: string;
+  }[];
+  versions: {
+    version: string;
+    link: string;
+  }[];
+}
+
+const packages: Package[] = data.packages;
+const title = data.meta.title;
+---
+
+<Layout title={title}>
+  <section>
+    <h1 class="my-6 text-4xl font-bold">{title}</h1>
+    <p class="my-6 text-lg font-normal">
+      {data.meta.welcomeMessaage}
+    </p>
+    <div class="mockup-code">
+      <pre
+        data-prefix="$"><code>pip install &lt;package_name&gt; --extra-index-url {data.meta.indexUrl}</code></pre>
+    </div>
+  </section>
+  <div class="divider"></div>
+  <section>
+    {
+      packages.map((p, index) => (
+        <a href={`/${p.name}`}>
+          <div class="card container bg-base-100 hover:bg-gray-100 border my-4">
+            <div class="card-body">
+              <h2 class="card-title">
+                {p.name}
+                {p.versions.length >= 1 &&
+                  p.versions[p.versions.length - 1].version && (
+                    <div class="badge">
+                      {p.versions[p.versions.length - 1].version}
+                    </div>
+                  )}
+              </h2>
+              {p.summary && <p>{p.summary}</p>}
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </section>
+</Layout>
