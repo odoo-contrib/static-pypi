@@ -29,7 +29,7 @@ const { packageInfo, meta } = Astro.props;
   </section>
   <div class="divider"></div>
   <div class="flex w-full">
-    <div class="grid flex-shrink-0">
+    <div class="flex-shrink-0">
       <h3 class="mb-4 text-xl font-bold">Links</h3>
       <div class="btn-group btn-group-vertical">
         {
@@ -46,14 +46,14 @@ const { packageInfo, meta } = Astro.props;
     </div>
     <div class="divider divider-horizontal"></div>
     <div class="grid flex-grow">
-      <h3 class="text-xl font-bold">Release history</h3>
+      <h3 class="mb-4 text-xl font-bold">Release history</h3>
       <ul class="menu bg-base-100 w-full">
         {
           packageInfo.versions
             .map((item) => item)
             .reverse()
             .map((v: { version: string; link: string }) => (
-              <li class="container bg-base-100 hover:bg-gray-100 border my-1 rounded-2xl">
+              <li class="container bg-base-100 border my-1 rounded-2xl">
                 <a href={v.link}>{v.version}</a>
               </li>
             ))

@@ -34,8 +34,8 @@ const title = data.meta.title;
   <section>
     {
       packages.map((p, index) => (
-        <a href={`/${p.name}`}>
-          <div class="card container bg-base-100 hover:bg-gray-100 border my-4">
+        <a href={p.name}>
+          <div class="card container bg-base-100 border my-4">
             <div class="card-body">
               <h2 class="card-title">
                 {p.name}

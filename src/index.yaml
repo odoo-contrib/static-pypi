@@ -1,7 +1,7 @@
 meta:
   title: Private Pypi
   welcomeMessaage: "Welcome to the my private Python package index! You can install packages with :"
-  indexUrl: https://kafai-lam.github.io/pypi/
+  indexUrl: https://odoo-contrib.github.io/static-pypi/
 
 packages:
   - name: odoo
@@ -11,7 +11,17 @@ packages:
       - name: Homepage
         url: https://www.odoo.com
       - name: Github
-        url: https://github.com/kafai-lam/odoo
+        url: https://github.com/odoo-contrib/odoo-wheel
     versions:
-      - version: 16.0.post20230503
-        link: https://github.com/kafai-lam/odoo/releases/download/16.0.post20230503/odoo-16.0.post20230503-py3-none-any.whl
+      - version: 14.0.post20230504
+        link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230504/odoo-14.0.post20230504-py3-none-any.whl
+      - version: 15.0.post20230504
+        link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230504/odoo-15.0.post20230504-py3-none-any.whl
+      - version: 16.0.post20230504
+        link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230504/odoo-16.0.post20230504-py3-none-any.whl
+      - version: 14.0.post20230505
+        link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230505/odoo-14.0.post20230505-py3-none-any.whl
+      - version: 15.0.post20230505
+        link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230505/odoo-15.0.post20230505-py3-none-any.whl
+      - version: 16.0.post20230505
+        link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230505/odoo-16.0.post20230505-py3-none-any.whl
