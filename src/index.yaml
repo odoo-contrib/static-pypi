@@ -31,3 +31,12 @@ packages:
         link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230506/odoo-15.0.post20230506-py3-none-any.whl
       - version: 16.0.post20230506
         link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230506/odoo-16.0.post20230506-py3-none-any.whl
+  - name: odoo-addon-session-redis
+    summary: Store web sessions in Redis
+    description: Store web sessions in Redis
+    links:
+      - name: Github
+        url: https://github.com/camptocamp/odoo-cloud-platform/tree/16.0/session_redis
+    versions:
+      - version: "16.0.1.0.0.2"
+        link: git+https://github.com/camptocamp/odoo-cloud-platform@16.0#subdirectory=setup/session_redis&egg=odoo-addon-session-redis-16.0.1.0.0.2
