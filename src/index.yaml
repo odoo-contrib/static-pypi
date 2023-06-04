@@ -31,6 +31,12 @@ packages:
         link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230506/odoo-15.0.post20230506-py3-none-any.whl
       - version: 16.0.post20230506
         link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230506/odoo-16.0.post20230506-py3-none-any.whl
+      - version: 14.0.post20230604
+        link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230604/odoo-14.0.post20230604-py3-none-any.whl
+      - version: 15.0.post20230604
+        link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230604/odoo-15.0.post20230604-py3-none-any.whl
+      - version: 16.0.post20230604
+        link: https://github.com/odoo-contrib/odoo-wheel/releases/download/20230604/odoo-16.0.post20230604-py3-none-any.whl
   - name: odoo-addon-session-redis
     summary: Store web sessions in Redis
     description: Store web sessions in Redis
